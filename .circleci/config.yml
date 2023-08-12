@@ -17,10 +17,13 @@ jobs:
             npm install
             npm run build
       - run:
+          name: Install SonarScanner
+          command: npm install -g sonarqube-scanner
+      - run:
           name: Run SonarCloud analysis
-          command: >
-            export SONAR_PROJECT_KEY=tvasha-1 &&
-            export SONAR_ORGANIZATION=Theevasha Naidoo &&
+          command: 
+            export SONAR_PROJECT_KEY=tvasha-1 
+            export SONAR_ORGANIZATION=Theevasha Naidoo 
             sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.organization=$SONAR_ORGANIZATION
     
 
