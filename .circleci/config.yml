@@ -22,8 +22,8 @@ jobs:
       - run:
           name: Run SonarCloud analysis
           command: |
-            export SONAR_PROJECT_KEY="tvasha-1" 
-            export SONAR_ORGANIZATION="Theevasha Naidoo" 
+            export SONAR_PROJECT_KEY="tvasha_APDS-Ice" 
+            export SONAR_ORGANIZATION="tvasha-1" 
             npx sonar-scanner -Dsonar.projectKey="$SONAR_PROJECT_KEY" -Dsonar.organization="$SONAR_ORGANIZATION"
 
   say-hello:
