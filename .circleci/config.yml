@@ -8,7 +8,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/azure:2023.08
+      - image: cimg/azure:2023.08 
     steps:
       - checkout
       - run:
