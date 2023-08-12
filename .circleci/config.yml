@@ -24,7 +24,7 @@ jobs:
           command: |
             export SONAR_PROJECT_KEY="tvasha-1" 
             export SONAR_ORGANIZATION="Theevasha Naidoo" 
-            ./node_modules/sonarqube-scanner/bin/sonar-scanner -Dsonar.projectKey="$SONAR_PROJECT_KEY" -Dsonar.organization="$SONAR_ORGANIZATION"
+            npx sonar-scanner -Dsonar.projectKey="$SONAR_PROJECT_KEY" -Dsonar.organization="$SONAR_ORGANIZATION"
 
   say-hello:
     docker:
