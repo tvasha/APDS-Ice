@@ -16,7 +16,13 @@ jobs:
           command:  
             npm install
             npm run build
-      - sonarcloud/scan
+      - run:
+          name: Run SonarCloud analysis
+          command: 
+            export SONAR_PROJECT_KEY=tvasha-1
+            export SONAR_ORGANIZATION=your-sonar-organization
+            sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.organization=$SONAR_ORGANIZATION
+    
 
   say-hello:
     docker:
@@ -27,12 +33,12 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
 
-orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.3
-
 workflows:
   main:
     jobs:
       - build:
           context: SonarCloud
+
+orbs:
+      sonarcloud: sonarsource/sonarcloud@1.0.3
 
