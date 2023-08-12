@@ -20,7 +20,7 @@ jobs:
           name: Run SonarCloud analysis
           command: 
             export SONAR_PROJECT_KEY=tvasha-1
-            export SONAR_ORGANIZATION=your-sonar-organization
+            export SONAR_ORGANIZATION=Theevasha Naidoo
             sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.organization=$SONAR_ORGANIZATION
     
 
